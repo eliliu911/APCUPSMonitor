@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000000000000000000001 /* APCUPSMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000001 /* APCUPSMonitorApp.swift */; };
+		A00000000000000000000002 /* UPSMonitorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000002 /* UPSMonitorModel.swift */; };
+		A00000000000000000000003 /* SystemUPSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000003 /* SystemUPSReader.swift */; };
+		A00000000000000000000004 /* HIDUPSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000004 /* HIDUPSReader.swift */; };
+		A00000000000000000000005 /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000005 /* MenuContentView.swift */; };
+		A00000000000000000000006 /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000006 /* DiagnosticsView.swift */; };
+		A00000000000000000000007 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000008 /* IOKit.framework */; };
+		A00000000000000000000008 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000A /* AppIcon.icns */; };
+		A00000000000000000000009 /* SnapshotProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000B /* SnapshotProcess.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B00000000000000000000001 /* APCUPSMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APCUPSMonitorApp.swift; sourceTree = "<group>"; };
+		B00000000000000000000002 /* UPSMonitorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPSMonitorModel.swift; sourceTree = "<group>"; };
+		B00000000000000000000003 /* SystemUPSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUPSReader.swift; sourceTree = "<group>"; };
+		B00000000000000000000004 /* HIDUPSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDUPSReader.swift; sourceTree = "<group>"; };
+		B00000000000000000000005 /* MenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentView.swift; sourceTree = "<group>"; };
+		B00000000000000000000006 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		B00000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00000000000000000000008 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B00000000000000000000009 /* APCUPSMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APCUPSMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0000000000000000000000A /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		B0000000000000000000000B /* SnapshotProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotProcess.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C00000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000007 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D00000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				D00000000000000000000002 /* APCUPSMonitor */,
+				D00000000000000000000003 /* Frameworks */,
+				D00000000000000000000004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D00000000000000000000002 /* APCUPSMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000001 /* APCUPSMonitorApp.swift */,
+				B00000000000000000000002 /* UPSMonitorModel.swift */,
+				B00000000000000000000003 /* SystemUPSReader.swift */,
+				B00000000000000000000004 /* HIDUPSReader.swift */,
+				B00000000000000000000005 /* MenuContentView.swift */,
+				B00000000000000000000006 /* DiagnosticsView.swift */,
+				B0000000000000000000000B /* SnapshotProcess.swift */,
+				B00000000000000000000007 /* Info.plist */,
+				B0000000000000000000000A /* AppIcon.icns */,
+			);
+			path = APCUPSMonitor;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000008 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000009 /* APCUPSMonitor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E00000000000000000000001 /* APCUPSMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00000000000000000000002 /* Build configuration list for PBXNativeTarget "APCUPSMonitor" */;
+			buildPhases = (
+				C00000000000000000000002 /* Sources */,
+				C00000000000000000000001 /* Frameworks */,
+				C00000000000000000000003 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = APCUPSMonitor;
+			productName = APCUPSMonitor;
+			productReference = B00000000000000000000009 /* APCUPSMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E00000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					E00000000000000000000001 = { CreatedOnToolsVersion = 16.0; };
+				};
+			};
+			buildConfigurationList = F00000000000000000000001 /* Build configuration list for PBXProject "APCUPSMonitor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = D00000000000000000000001;
+			productRefGroup = D00000000000000000000004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (E00000000000000000000001 /* APCUPSMonitor */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C00000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000008 /* AppIcon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C00000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000001 /* APCUPSMonitorApp.swift in Sources */,
+				A00000000000000000000002 /* UPSMonitorModel.swift in Sources */,
+				A00000000000000000000003 /* SystemUPSReader.swift in Sources */,
+				A00000000000000000000004 /* HIDUPSReader.swift in Sources */,
+				A00000000000000000000005 /* MenuContentView.swift in Sources */,
+				A00000000000000000000006 /* DiagnosticsView.swift in Sources */,
+				A00000000000000000000009 /* SnapshotProcess.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F00000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F00000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F00000000000000000000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = APCUPSMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = local.aistation.APCUPSMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F00000000000000000000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = APCUPSMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = local.aistation.APCUPSMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F00000000000000000000001 /* Build configuration list for PBXProject "APCUPSMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00000000000000000000011 /* Debug */,
+				F00000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00000000000000000000002 /* Build configuration list for PBXNativeTarget "APCUPSMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00000000000000000000021 /* Debug */,
+				F00000000000000000000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E00000000000000000000002 /* Project object */;
+}
