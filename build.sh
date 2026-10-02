@@ -30,3 +30,12 @@ if [[ "${1:-}" == "install" ]]; then
     cp -R APCUPSMonitor.app "${TARGET_DIR}/"
     echo "==> Successfully installed to ${TARGET_DIR}/APCUPSMonitor.app"
 fi
+
+if [[ "${1:-}" == "package" ]]; then
+    VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" APCUPSMonitor/Info.plist 2>/dev/null || echo "0.1.2")
+    ZIP_NAME="APCUPSMonitor-v${VERSION}.zip"
+    echo "==> Creating release archive ${ZIP_NAME}..."
+    rm -f "${ZIP_NAME}"
+    zip -r -y -q "${ZIP_NAME}" APCUPSMonitor.app
+    echo "==> Release archive ready: ${ZIP_NAME}"
+fi

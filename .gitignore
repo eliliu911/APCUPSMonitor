@@ -43,3 +43,7 @@ Package.resolved
 *.o
 *.swp
 *~
+
+# Release packages
+*.zip
+*.dmg
