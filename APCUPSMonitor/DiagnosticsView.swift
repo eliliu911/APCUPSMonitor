@@ -6,8 +6,8 @@ struct DiagnosticsView: View {
     var body: some View {
         TabView {
             VStack(alignment: .leading, spacing: 12) {
-                let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.1.2"
-                let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "3"
+                let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.1.4"
+                let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "5"
                 Text("Version: v\(version) (build \(build))")
                     .fontWeight(.medium)
                 Text("macOS: \(model.systemStatus)")

@@ -32,7 +32,7 @@ if [[ "${1:-}" == "install" ]]; then
 fi
 
 if [[ "${1:-}" == "package" ]]; then
-    VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" APCUPSMonitor/Info.plist 2>/dev/null || echo "0.1.2")
+    VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" APCUPSMonitor/Info.plist 2>/dev/null || echo "0.1.4")
     ZIP_NAME="APCUPSMonitor-v${VERSION}.zip"
     echo "==> Creating release archive ${ZIP_NAME}..."
     rm -f "${ZIP_NAME}"

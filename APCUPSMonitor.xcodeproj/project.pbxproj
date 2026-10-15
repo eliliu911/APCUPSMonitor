@@ -15,6 +15,7 @@
 		A00000000000000000000007 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000008 /* IOKit.framework */; };
 		A00000000000000000000008 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000A /* AppIcon.icns */; };
 		A00000000000000000000009 /* SnapshotProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000B /* SnapshotProcess.swift */; };
+		A0000000000000000000000A /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000C /* StatusItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B00000000000000000000009 /* APCUPSMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APCUPSMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0000000000000000000000A /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		B0000000000000000000000B /* SnapshotProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotProcess.swift; sourceTree = "<group>"; };
+		B0000000000000000000000C /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B00000000000000000000005 /* MenuContentView.swift */,
 				B00000000000000000000006 /* DiagnosticsView.swift */,
 				B0000000000000000000000B /* SnapshotProcess.swift */,
+				B0000000000000000000000C /* StatusItemController.swift */,
 				B00000000000000000000007 /* Info.plist */,
 				B0000000000000000000000A /* AppIcon.icns */,
 			);
@@ -151,6 +154,7 @@
 				A00000000000000000000005 /* MenuContentView.swift in Sources */,
 				A00000000000000000000006 /* DiagnosticsView.swift in Sources */,
 				A00000000000000000000009 /* SnapshotProcess.swift in Sources */,
+				A0000000000000000000000A /* StatusItemController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,13 +190,13 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = APCUPSMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = local.aistation.APCUPSMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -205,13 +209,13 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = APCUPSMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = local.aistation.APCUPSMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

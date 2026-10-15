@@ -57,3 +57,34 @@ CLI diagnosis modes (JSON output, no menu UI):
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## 0.1.4 — Long-running memory use
+
+The menu-bar label now uses `NSStatusItem` instead of a continuously observed
+SwiftUI `MenuBarExtra`. Only changed label values are applied. SwiftUI details
+are created when opening the popover and released when closing it. Read times
+use formatted strings rather than dynamic date text.
+
+**Show data in menu bar** is a persistent switch in the popover (off by default).
+Off shows just the power/battery icon; on also shows watts, load, or battery.
+A per-user process lock prevents duplicate GUI instances, including across
+installed and development copies, without blocking isolated reader processes.
+
+The 2-second polling,
+independent workers, timeout recovery, and shared HID access are unchanged.
+
+On the affected machine, the 0.1.2 process had a 3.9 GiB physical footprint after
+about 17 days, dominated by millions of SwiftUI view/text/closure allocations.
+This change removes the continuously retained menu-bar view graph. Short stress
+tests cannot prove multi-week stability or reproduce every trigger of that
+accumulation.
+
+Memory regression checks (run from a logged-in macOS desktop; temporary test
+menu-bar items appear during UI tests):
+
+```bash
+./Tests/memory.sh           # 5,000 background updates, bounded memory growth
+./Tests/memory.sh --panel   # also repeatedly open/close the detail popover
+./Tests/memory.sh --legacy  # comparison with the former MenuBarExtra
+./Tests/memory.sh --reader  # 2,000 isolated worker reads
+```

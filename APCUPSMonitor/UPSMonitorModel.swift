@@ -4,6 +4,10 @@ import AppKit
 
 @MainActor
 final class UPSMonitorModel: ObservableObject {
+    @Published var showMenuBarData: Bool {
+        didSet { preferences.set(showMenuBarData, forKey: "showMenuBarData") }
+    }
+    private let preferences: UserDefaults
     @Published var deviceName = "APC UPS"
     @Published var batteryPercent: Int?
     @Published var runtimeMinutes: Int?
@@ -32,7 +36,10 @@ final class UPSMonitorModel: ObservableObject {
     // Back-UPS ES 600M1 rated active power.
     let nominalWatts: Double = 330
 
-    init(executable: URL = Bundle.main.executableURL!, startAutomatically: Bool = true) {
+    init(executable: URL = Bundle.main.executableURL!, startAutomatically: Bool = true,
+         preferences: UserDefaults = .standard) {
+        self.preferences = preferences
+        self.showMenuBarData = preferences.bool(forKey: "showMenuBarData")
         self.executable = executable
         guard startAutomatically else { return }
         terminationObserver = NotificationCenter.default.addObserver(
@@ -72,15 +79,13 @@ final class UPSMonitorModel: ObservableObject {
     }
 
     var menuTitle: String {
-        if let watts = estimatedWatts {
-            return String(format: "%.0f W", watts)
-        }
-        if let loadPercent {
-            return String(format: "%.0f%%", loadPercent)
-        }
-        if let batteryPercent {
-            return "UPS \(batteryPercent)%"
-        }
+        Self.title(watts: estimatedWatts, load: loadPercent, battery: batteryPercent)
+    }
+
+    nonisolated static func title(watts: Double?, load: Double?, battery: Int?) -> String {
+        if let watts { return String(format: "%.0f W", watts) }
+        if let load { return String(format: "%.0f%%", load) }
+        if let battery { return "UPS \(battery)%" }
         return "UPS"
     }
 

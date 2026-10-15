@@ -24,7 +24,7 @@ struct MenuContentView: View {
             if let updated = model.lastSystemRead {
                 HStack {
                     Text("macOS read:")
-                    Text(updated, style: .time).monospacedDigit()
+                    Text(updated.formatted(date: .omitted, time: .standard)).monospacedDigit()
                 }
                 .font(.caption2)
                 .foregroundStyle(.secondary)
@@ -62,6 +62,10 @@ struct MenuContentView: View {
             }
             .buttonStyle(.borderless)
 
+            Toggle("Show data in menu bar", isOn: $model.showMenuBarData)
+                .toggleStyle(.switch)
+                .font(.caption)
+
             if showingDiagnostics {
                 Divider()
                 DiagnosticsView(model: model)
@@ -91,12 +95,12 @@ struct MenuContentView: View {
     }
 
     private var appVersion: String {
-        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.1.2"
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.1.4"
     }
 
     private var fullVersion: String {
         let version = appVersion
-        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "3"
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "5"
         return "APCUPSMonitor v\(version) (\(build))"
     }
 }
